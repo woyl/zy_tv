@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_exit"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_temp_exit"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingBottom="26pt"
+            android:text="只是暂时离开\n你还是会回来哒～"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/finish_meeting_tips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_finish_meeting"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingBottom="26pt"
+            android:text="结束会把所有人\n都踢出去哒～"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/checkLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_check_box_select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16pt"
+            android:text="离开并结束教室"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16pt"
+            android:layout_weight="1"
+            android:background="@drawable/bg_meeting_button_selector"
+            android:text="暂时退出"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16pt"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_meeting_button_selector"
+            android:text="结束"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

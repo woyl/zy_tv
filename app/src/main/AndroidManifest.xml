@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zhongyou.meettvapplicaion">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.yunos.tv.alitvasr.permission.SERVICE_LISTEN" />
+    <uses-permission android:name="com.yunos.tv.alitvasr.permission.CONTROL" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="UnusedAttribute">
+        <activity android:name=".maker.NotifyDetailActivity"/>
+        <activity android:name=".maker.NotifyActivity" />
+        <activity
+            android:name=".maker.MakerDetailActivity"
+            android:theme="@style/MakerFullscreenTheme" />
+        <activity
+            android:name=".maker.MakerIndexActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".ui.DemoActivity" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="c052a2132b927702bad4da2ab50728c0" />
+
+        <activity
+            android:name=".business.IMTVChatActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.zhongyou.meettvapplicaion"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".im.SealNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.THIRD_PARTY_PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".business.SearchActivity" /> <!-- 此处修改 必须得检查版本版本更新是否能正常运行 如非必要 请不要更改 -->
+        <provider
+            android:name=".MyFileProvider"
+            android:authorities="com.zhongyou.meettvapplicaion.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="1920" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="1080" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <activity android:name=".business.VideoActivity" />
+        <activity
+            android:name=".business.LauncherActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".business.SignInActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".business.OnCallActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/TranslucentStyle" />
+        <activity
+            android:name=".business.SettingActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".business.ResolutionActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".business.MeetingsActivityLaunch"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".business.StatusesActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".business.StatusActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".business.DocumentActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".business.DocUploadActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".business.adapter.QRCodeActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:label="@string/blank"
+            android:screenOrientation="landscape"
+            android:theme="@style/MyDialog" />
+        <activity
+            android:name=".business.QRCodeActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:label="@string/blank"
+            android:screenOrientation="landscape"
+            android:theme="@style/MyDialog" />
+        <activity android:name=".business.UpdateActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.agora.openlive.ui.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|screenSize|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="io.agora.openlive.ui.LiveRoomActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|screenSize|fontScale"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="io.agora.openlive.ui.MeetingInitActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="io.agora.openlive.ui.MeetingBroadcastActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="io.agora.openlive.ui.MeetingAudienceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="io.agora.openlive.ui.InviteMeetingBroadcastActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="io.agora.openlive.ui.InviteMeetingAudienceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".business.ForumActivity"
+            android:theme="@style/TranslucentStyle" />
+        <activity
+            android:name=".TVDialogActivity"
+            android:theme="@style/Theme.Leanback.GuidedStep" />
+
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="${TD_APP_ID}" /> <!-- 服务开始 -->
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="${TD_CHANNEL_ID}" />
+
+        <receiver android:name=".receiver.PhoneReceiver">
+            <intent-filter>
+
+                <!-- 获取来电广播 -->
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <!-- 获取去电广播 -->
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver> <!-- 服务结束 -->
+        <!-- TD统计 开始 -->
+        <service android:name=".service.LoginStateListener" /> <!-- TD统计 使用build配置 -->
+        <service android:name=".service.UserInfoListener" />
+        <service android:name=".core.PlayService" />
+        <service
+            android:name="com.talkingdata.sdk.TDAntiCheatingService"
+            android:process="com.talkingdata.sdk.TDAntiCheatingService"> <!-- 用户质量评估Service可以配置在主进程或者单独进程 -->
+            <intent-filter>
+                <action android:name="com.talkingdata.sdk.TDAntiCheatingService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

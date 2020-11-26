@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.zhongyou.meettvapplicaion.maker.NotifyViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bj"
+        android:orientation="vertical"
+        tools:context=".maker.NotifyActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88pt"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="2pt"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/title"
+                android:background="@drawable/title_right" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="通知消息"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="2pt"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/title"
+                android:background="@drawable/title_left" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <RelativeLayout
+                android:id="@+id/classInformation"
+                android:layout_width="381pt"
+                android:layout_height="425pt"
+                android:layout_marginRight="94pt"
+                android:background="@drawable/bg_nofity_selector"
+                android:focusable="true"
+                android:nextFocusLeft="@null"
+                android:nextFocusRight="@id/makerInformation"
+                android:nextFocusUp="@null"
+                android:nextFocusDown="@null"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/class_count"
+                    android:layout_width="75pt"
+                    android:layout_height="75pt"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="30pt"
+                    android:background="@drawable/message_red_dot"
+                    android:gravity="center"
+                    android:padding="10pt"
+                    android:text="@{viewModel.classNotifyCount}"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility='@{viewModel.classNotifyCount.equals("0")?View.GONE:View.VISIBLE}' />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="2dp"
+                        android:scaleType="center"
+                        android:src="@drawable/class_notify" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20sp"
+                        android:text="教室通知"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/makerInformation"
+                android:layout_width="381pt"
+                android:layout_height="425pt"
+                android:background="@drawable/bg_nofity_selector"
+                android:focusable="true"
+                android:nextFocusLeft="@id/classInformation"
+                android:nextFocusRight="@id/systemInformation"
+                android:nextFocusUp="@null"
+                android:nextFocusDown="@null"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/maker_count"
+                    android:layout_width="75pt"
+                    android:layout_height="75pt"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="30pt"
+                    android:background="@drawable/message_red_dot"
+                    android:gravity="center"
+                    android:padding="10pt"
+                    android:text="@{viewModel.makerNotifyCount}"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility='@{viewModel.makerNotifyCount.equals("0")?View.GONE:View.VISIBLE}' />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:scaleType="center"
+                        android:src="@drawable/maker_notify_msg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img2"
+                        android:layout_marginTop="20sp"
+                        android:text="创客通知"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/systemInformation"
+                android:layout_width="381pt"
+                android:layout_height="425pt"
+                android:layout_marginLeft="94pt"
+                android:background="@drawable/bg_nofity_selector"
+                android:focusable="true"
+                android:nextFocusLeft="@id/makerInformation"
+                android:nextFocusRight="@null"
+                android:nextFocusUp="@null"
+                android:nextFocusDown="@null"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/system_count"
+                    android:layout_width="75pt"
+                    android:layout_height="75pt"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="30pt"
+                    android:background="@drawable/message_red_dot"
+                    android:gravity="center"
+                    android:padding="10pt"
+                    android:text="@{viewModel.systemNotifyCount}"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility='@{viewModel.systemNotifyCount.equals("0")?View.GONE:View.VISIBLE}' />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:scaleType="center"
+                        android:src="@drawable/system_notify" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img1"
+                        android:layout_marginTop="20sp"
+                        android:text="系统通知"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

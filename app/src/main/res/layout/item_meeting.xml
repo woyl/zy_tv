@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_right_angle_selector"
+    android:focusable="true"
+    android:padding="3dp">
+
+    <ImageView
+        android:layout_width="400pt"
+        android:layout_height="550pt"
+        android:src="@drawable/bg_meeting_list" />
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="400pt"
+        android:layout_height="550pt"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="400pt"
+        android:layout_height="550pt"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_sp_36" />
+
+        <TextView
+            android:id="@+id/begin_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_sp_36"
+            tools:text="2017.11.17 14.30" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/meeting_state"
+        android:layout_width="400pt"
+        android:layout_height="90pt"
+        android:layout_gravity="center|bottom"
+        android:gravity="center"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/my_sp_40"
+        tools:text="会议进行中" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="400pt"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/my_sp_40"
+        tools:text="这是这个会议的标题" />
+</FrameLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/bg_all"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/my_px_24"
+    android:paddingTop="@dimen/my_px_20"
+    android:paddingRight="@dimen/my_px_24"
+    tools:context="io.agora.openlive.ui.InviteMeetingAudienceActivity">
+
+    <LinearLayout
+        android:layout_width="1145px"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/my_px_12"
+        android:focusable="false"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="700px"
+            android:background="@android:color/black"
+            android:focusable="false"
+            tools:visibility="visible">
+
+            <FrameLayout
+                android:id="@+id/broadcaster_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/broadcaster_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:layout_gravity="center"
+                android:text="等待主持人进入..."
+                android:textColor="@color/white"
+                android:textSize="@dimen/my_sp_30" />
+
+            <ImageView
+                android:id="@+id/doc_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="@dimen/my_px_30"
+                android:layout_marginBottom="@dimen/my_px_20"
+                android:focusable="false"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my_px_30"
+                android:visibility="gone"
+                tools:text="第1/20页"
+                tools:visibility="visible" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/broadcaster_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/my_px_24"
+            android:focusable="false"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_sp_40"
+            tools:text="主持人：黄老师" />
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120px"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mute_audio"
+                android:layout_width="@dimen/my_px_90"
+                android:layout_height="@dimen/my_px_90"
+                android:background="@drawable/bg_meeting_mute_selector"
+                android:src="@drawable/ic_unmuted" />
+
+            <Button
+                android:id="@+id/finish_meeting"
+                android:layout_width="@dimen/my_px_300"
+                android:layout_height="@dimen/my_px_90"
+                android:layout_marginLeft="@dimen/my_px_50"
+                android:background="@drawable/bg_meeting_button_selector"
+                android:drawableLeft="@drawable/ic_meeting_close"
+                android:paddingLeft="@dimen/my_px_48"
+                android:paddingRight="@dimen/my_px_48"
+                android:text="退出"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my_sp_40" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:focusable="false"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/broadcaster_small_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_px_340"
+            android:layout_marginBottom="@dimen/my_px_20"
+            android:background="@android:color/black"
+            android:focusable="false"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+            app:spanCount="2"
+            tools:listitem="@layout/item_meeting_audience_video"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+            android:id="@+id/audience_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+</LinearLayout>

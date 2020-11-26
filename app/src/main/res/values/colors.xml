@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ========================agora color======================== -->
+
+    <!-- ========================agora color======================== -->
+
+    <!--通用颜色-->
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="gray">#808080</color>
+    <color name="green">#008000</color>
+
+    <color name="text_yellow_ff9c00">#ff9c00</color>
+    <color name="text_gray_565666">#565666</color>
+    <color name="red">#ff0000</color>
+
+    <!--下载相关颜色-->
+    <color name="yellow_ffe539">#FFE539</color>
+    <color name="gray_babdee">#BABDEE</color>
+    <color name="gray_xxxx">#5f636d</color>
+    <!--下载相关颜色-->
+
+
+    <color name="text_yellow_fff000">#fff000</color>
+
+
+    <color name="transparent_20_white">#33FFFFFF</color>
+    <color name="transparent_70_black">#b3000000</color>
+    <color name="transparent_60_black">#a8000000</color>
+    <color name="transparent_80_white">#ccFFFFFF</color>
+    <!-- ========================app color======================== -->
+    <color name="bg_color">#283f53</color>
+
+    <!-- ========================app color======================== -->
+
+    <color name="calling_name_color">#ff6482</color>
+
+    <color name="bg_message_dialog_color">#523a78</color>
+    <color name="blue_142432">#142432</color>
+    <color name="blue_081420">#081420</color>
+
+
+    <color name="c_fffc00">#fffc00</color>
+
+    <color name="transparent_20_black">#33000000</color>
+    <color name="transparent_50_black">#7f000000</color>
+    <color name="transparent_80_black">#cc000000</color>
+
+    <color name="c_e646006a">#e646006a</color>
+    <color name="c_e600556a">#e600556a</color>
+    <color name="c_e66a5200">#e66a5200</color>
+
+    <color name="c_909090">#909090</color>
+    <color name="c_172938">#172938</color>
+    <color name="c_f62c64">#f62c64</color>
+    <color name="c_e6f62c64">#e6f62c64</color>
+    <color name="c_e6ffffff">#e6ffffff</color>
+    <color name="c_6BD500">#6BD500</color>
+    <color name="c_ff9900">#ff9900</color>
+    <color name="c_ff8600">#ff8600</color>
+    <color name="c_bbbaba">#bbbaba</color>
+    <color name="c_fff000">#fff000</color>
+    <color name="c_d8d8d8">#d8d8d8</color>
+    <color name="c_FF6934A4">#FF6934A4</color>
+
+    <color name="t_c_4dffffff">#4dffffff</color>
+    <color name="c_5F7C94">#5F7C94</color>
+    <color name="c_ffffff">#ffffff</color>
+    <color name="c_5e6dbe">#5e6dbe</color>
+
+    <color name="c_CC2C2C2C">#CC2C2C2C</color>
+    <color name="c_FF909090">#FF909090</color>
+    <color name="c_FF7FBAFF">#FF7FBAFF</color>
+    <color name="c_FFFF0000">#FFFF0000</color>
+    <color name="c_FFF62C64">#FFF62C64</color>
+    <color name="c_FFBBBABA">#FFBBBABA</color>
+    <color name="c_FFCFCFCF">#FFCFCFCF</color>
+    <color name="blue">#5793E2</color>
+    <color name="color_bf000000">#bf000000</color>
+    <color name="color_fc3d45">#fc3d45</color>
+    <color name="color_4095e8">#4095e8</color>
+    <color name="color_1b2536">#1b2536</color>
+    <color name="image_background_color">#6F6F6F</color>
+    <color name="cl_default">#424242</color>
+    <color name="cl_error">#ffffff</color>
+
+    <color name="trans">#00000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+</resources>

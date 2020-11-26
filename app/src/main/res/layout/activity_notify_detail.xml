@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.zhongyou.meettvapplicaion.maker.NotifyDetailViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bj"
+        android:orientation="vertical"
+        tools:context=".maker.NotifyDetailActivity">
+
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88pt"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="2pt"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/title"
+                android:background="@drawable/title_right" />
+
+
+            <TextView
+                android:textSize="20sp"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@{viewModel.title}"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="2pt"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/title"
+                android:background="@drawable/title_left" />
+
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="130pt"
+            android:layout_marginTop="43pt"
+            android:layout_marginRight="130pt"
+            android:layout_marginBottom="70pt"
+            android:background="@drawable/notify_recyer_bg" />
+
+    </LinearLayout>
+</layout>

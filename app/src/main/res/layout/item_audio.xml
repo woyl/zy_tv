@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/audioContainer"
+    android:background="@drawable/bg_right_angle_selector"
+    android:focusable="true"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1pt"
+        android:background="#66cccccc" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22pt"
+        android:layout_marginTop="22pt"
+        android:layout_marginRight="22pt"
+        android:paddingBottom="23pt">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/audioState"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:text="怎样发掘孩子的天赋" />
+
+        <TextView
+            android:id="@+id/teacherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="18pt"
+            android:layout_toLeftOf="@+id/time"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="主讲人:某某某" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/teacherName"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="00:00/00:03:41" />
+
+        <ImageView
+            android:id="@+id/audioState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/name"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/maker_pause" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/time"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="2020-05-29" />
+    </RelativeLayout>
+    s
+</LinearLayout>

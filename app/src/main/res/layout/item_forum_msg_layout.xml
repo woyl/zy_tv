@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_forum_msg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_meeting_forum_selector"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/item_forum_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/my_px_40"
+        android:layout_marginTop="@dimen/my_px_25"
+        android:text="张三"
+        android:textColor="@color/white"
+        android:textSize="@dimen/my_sp_36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_forum_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/my_px_27"
+        android:layout_marginEnd="@dimen/my_px_56"
+        android:layout_marginBottom="@dimen/my_px_25"
+        android:adjustViewBounds="true"
+        android:maxWidth="@dimen/my_px_230"
+        android:maxHeight="@dimen/my_px_140"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/item_forum_username"
+        app:layout_constraintTop_toTopOf="@+id/item_forum_username" />
+
+    <TextView
+        android:id="@+id/item_forum_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/my_px_27"
+        android:layout_marginEnd="@dimen/my_px_56"
+        android:layout_marginBottom="@dimen/my_px_25"
+        android:text="这里是评论的内容这里是评论的内论容这里是这里是评论的内容这里是评论里是评论的内容这里是评论的内容这里是评论的内容这里是评论的内容"
+        android:textColor="@color/white"
+        android:textSize="@dimen/my_sp_36"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/item_forum_username"
+        app:layout_constraintTop_toTopOf="@+id/item_forum_username" />
+
+</android.support.constraint.ConstraintLayout>

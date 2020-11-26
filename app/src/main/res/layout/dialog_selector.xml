@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1000px"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_margin="50px"
+    android:background="@drawable/bg_meeting_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        tools:text="中断当前成都-三台县背坝镇奇运电器经营部-xxxxxx1112的连麦，连接成都-三台县背坝镇奇运电器经营部-xxxxxx1112的连麦"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="32px"
+        android:layout_marginTop="80px"
+        android:layout_marginRight="32px"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:layout_marginTop="80px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="40px"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_meeting_button_selector"
+            android:focusable="true"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:textColor="@color/white"
+            android:textSize="22sp">
+
+            <requestFocus />
+        </Button>
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_meeting_button_selector"
+            android:focusable="true"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+</RelativeLayout>

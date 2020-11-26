@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/liveParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_right_angle_selector"
+    android:focusable="true"
+    android:padding="5pt"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/meeting_bg">
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/liveImage"
+            android:src="@drawable/meeting_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/maker_live" />
+
+        <TextView
+            android:id="@+id/enterMeeting"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="点击进入直播间"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</RelativeLayout>

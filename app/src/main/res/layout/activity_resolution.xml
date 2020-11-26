@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_50_black"
+    android:gravity="center_vertical"
+    android:padding="@dimen/my_px_150">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分辨率设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_px_48"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/my_px_84"
+                android:layout_marginStart="@dimen/my_px_120"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/resolution_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/my_px_70"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:drawablePadding="0dp"
+                    android:background="@drawable/bg_resolution_selector"
+                    android:focusable="true"
+                    android:text="流畅"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/my_px_36" />
+
+                <RadioButton
+                    android:id="@+id/resolution_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/my_px_70"
+                    android:background="@drawable/bg_resolution_selector"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:drawablePadding="0dp"
+                    android:focusable="true"
+                    android:layout_marginTop="@dimen/my_px_66"
+                    android:text="标准（推荐）"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/my_px_36" />
+
+                <RadioButton
+                    android:id="@+id/resolution_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/my_px_70"
+                    android:background="@drawable/bg_resolution_selector"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:drawablePadding="0dp"
+                    android:focusable="true"
+                    android:layout_marginTop="@dimen/my_px_66"
+                    android:text="高清"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/my_px_36" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/my_px_84"
+                android:layout_marginStart="@dimen/my_px_320"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/my_sp_30"
+                    android:textColor="#909090"
+                    android:layout_marginStart="@dimen/my_px_20"
+                    android:layout_marginTop="@dimen/my_px_20"
+                    android:text="网络带宽每秒1MB以下" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/my_sp_30"
+                    android:layout_marginStart="@dimen/my_px_160"
+                    android:layout_marginTop="@dimen/my_px_90"
+                    android:textColor="#909090"
+                    android:text="网络带宽每秒1MB～2MB" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/my_sp_30"
+                    android:layout_marginStart="@dimen/my_px_20"
+                    android:layout_marginTop="@dimen/my_px_100"
+                    android:textColor="#909090"
+                    android:text="网络带宽每秒2MB以上" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/my_px_84"
+            android:text="* 分辨率设置的是传输出去的分辨率，即对方看到的清晰度"
+            android:textColor="#ff6482"
+            android:textSize="@dimen/my_px_30" />
+
+    </LinearLayout>
+
+</LinearLayout>

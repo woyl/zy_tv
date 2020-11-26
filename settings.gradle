@@ -1,0 +1,2 @@
+include ':jiaozivideoplayer'
+include ':app', ':jcvideoplayer-lib', ':MeetingCamera', ':vlayout', ':libuvccamera', ':jjdxm-ijkplayer', ':IMKit', ':IMLib'

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.zhongyou.meettvapplicaion.maker.MakerDetailModel" />
+    </data>
+
+    <RelativeLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="80pt"
+        android:layout_marginTop="20pt"
+        android:layout_marginRight="80pt"
+        android:layout_marginBottom="20pt">
+
+        <TextView
+            android:id="@+id/makerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.title}"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:text="5.11直播会议" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/makerTitle"
+            android:layout_marginTop="10pt"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.55">
+
+                    <include layout="@layout/maker_detail_audio" />
+
+                    <include layout="@layout/maker_detail_live" />
+
+                    <include layout="@layout/maker_detail_video" />
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/introductionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="43pt"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/maker_detail_selector"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="26pt">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="简介:"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/introduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

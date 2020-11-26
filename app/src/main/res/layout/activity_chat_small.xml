@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    tools:context="io.agora.openlive.ui.LiveRoomActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_call" />
+
+    <ImageView
+        android:id="@+id/end_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:focusable="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_call_selector"
+        android:padding="2dp"
+        android:src="@drawable/btn_endcall">
+        <requestFocus/>
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <io.agora.openlive.ui.GridVideoViewContainer
+                android:id="@+id/grid_video_view_container"
+                android:layout_width="@dimen/my_px_1140"
+                android:layout_height="@dimen/my_px_640" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent_50_black"
+                android:paddingBottom="6dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="6dp">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/my_px_100"
+                    android:layout_height="@dimen/my_px_100"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:id="@+id/sale_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/my_px_14"
+                    android:layout_toRightOf="@id/avatar"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sale_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/my_px_50"/>
+
+                    <TextView
+                        android:id="@+id/store_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/my_px_20"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/my_px_36"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/device_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sale_layout"
+                    android:layout_marginLeft="@dimen/my_px_20"
+                    android:layout_toRightOf="@id/avatar"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/store_image"
+                android:layout_width="@dimen/my_px_550"
+                android:layout_height="@dimen/my_px_310" />
+
+            <FrameLayout
+                android:layout_width="@dimen/my_px_550"
+                android:layout_height="@dimen/my_px_310"
+                android:layout_marginTop="12dp">
+
+                <ViewStub
+                    android:id="@id/small_video_view_dock"
+                    android:layout_width="@dimen/my_px_550"
+                    android:layout_height="@dimen/my_px_310"
+                    android:inflatedId="@id/small_video_view_dock"
+                    android:layout="@layout/small_video_view_dock" />
+
+                <TextView
+                    android:id="@+id/camera_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@android:color/black"
+                    android:visibility="gone"
+                    android:textSize="20sp"
+                    android:text="未连接摄像头，请重新通话"/>
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/transparent_50_black"
+                android:paddingBottom="6dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="6dp">
+
+                <ImageView
+                    android:id="@+id/expostor_avatar"
+                    android:layout_width="@dimen/my_px_100"
+                    android:layout_height="@dimen/my_px_100"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/expostor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/my_px_20"
+                    android:layout_toEndOf="@id/expostor_avatar"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/my_px_50" />
+
+                <TextView
+                    android:id="@+id/expostor_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/expostor_name"
+                    android:layout_marginLeft="@dimen/my_px_20"
+                    android:layout_toEndOf="@id/expostor_avatar"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/net_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="6dp"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="网络连接不佳，视频将会有卡顿，可尝试降低分辨率"/>
+
+    <TextView
+        android:id="@+id/online_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/ic_meeting_people"
+        android:drawablePadding="6dp"
+        android:textColor="@color/c_fffc00"
+        tools:text="当前在线人数"/>
+
+</FrameLayout>

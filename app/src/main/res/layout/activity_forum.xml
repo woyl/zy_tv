@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview_forum"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/transparent_80_black"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout_forum_comment"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout_forum_comment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_px_100"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout_forum_comment_normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_px_100"
+            android:background="@drawable/bg_forum_activity_comment_selector"
+            android:focusable="true"
+            android:visibility="visible">
+            <requestFocus />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:text="评论"
+                android:textColor="@drawable/color_ff62c64_to_ffffff_selector"
+                android:textSize="@dimen/my_sp_36"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/my_px_7"
+                android:text="按"
+                android:textColor="@color/transparent_20_black"
+                android:textSize="@dimen/my_sp_36"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/my_px_44"
+                android:layout_height="@dimen/my_px_44"
+                android:layout_marginEnd="@dimen/my_px_7"
+                android:src="@drawable/btn_remote_control_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/my_px_30"
+                android:layout_marginEnd="@dimen/my_px_30"
+                android:layout_marginBottom="@dimen/my_px_30"
+                android:text="键退出评论列表"
+                android:textColor="@color/transparent_20_black"
+                android:textSize="@dimen/my_sp_36"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout_forum_comment_enter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_px_100"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edt_forum_comment"
+                android:layout_width="0dp"
+                android:imeOptions="actionSend"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/my_px_50"
+                android:layout_marginEnd="@dimen/my_px_50"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_forum_comment_send"
+                app:layout_constraintEnd_toStartOf="@+id/btn_forum_comment_send"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_forum_comment_send" />
+
+            <Button
+                android:id="@+id/btn_forum_comment_send"
+                android:layout_width="@dimen/my_px_200"
+                android:layout_height="@dimen/my_px_90"
+                android:layout_marginTop="@dimen/my_px_15"
+                android:layout_marginEnd="@dimen/my_px_15"
+                android:layout_marginBottom="@dimen/my_px_15"
+                android:background="@drawable/bg_forum_activity_comment_btn_selector"
+                android:text="发送"
+                android:textColor="@drawable/color_ff62c64_to_ffffff_selector"
+                android:textSize="@dimen/my_px_32"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

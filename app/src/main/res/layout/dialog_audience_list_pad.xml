@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_meeting_dialog"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/audience_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_audiences"
+        android:drawablePadding="6dp"
+        android:gravity="center_horizontal"
+        android:text="所有参会人"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="1540px"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_talk_focused"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="输入关键词搜索"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_search_selector"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_sp_30" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="1540px"
+        android:layout_height="800px"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:divider="@color/transparent"
+        android:dividerHeight="10dp"
+        android:visibility="visible" />
+
+</LinearLayout>

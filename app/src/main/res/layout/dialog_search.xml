@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="200px"
+    android:paddingTop="50px"
+    android:paddingRight="200px"
+    android:paddingBottom="100px">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="搜索"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:singleLine="true"
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32px"
+        android:background="@drawable/bg_edittext_selector"
+        android:drawableLeft="@drawable/search_black"
+        android:drawablePadding="16px"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:hint="请输入关键字"
+        android:minWidth="800px"
+        android:paddingLeft="16px"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32px">
+
+
+        <ImageButton
+            android:id="@+id/confirm"
+            android:layout_width="@dimen/my_px_254"
+            android:layout_height="@dimen/my_px_75"
+            android:background="@drawable/bt_code_qd"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_sp_25">
+
+            <requestFocus />
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/my_px_254"
+            android:layout_height="@dimen/my_px_75"
+            android:layout_marginLeft="@dimen/my_px_65"
+            android:background="@drawable/bt_code_qx"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_sp_25" />
+
+    </LinearLayout>
+
+</LinearLayout>

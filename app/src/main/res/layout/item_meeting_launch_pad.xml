@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:padding="10pt"
+        android:id="@+id/layout_bg"
+        android:layout_width="349pt"
+        android:layout_height="236pt"
+        android:layout_marginRight="@dimen/my_px_7"
+        android:background="@drawable/bg_right_angle_selector1"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/meeting_bg"
+            android:layout_width="match_parent"
+            android:layout_height="236pt"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_01"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="@dimen/my_px_83"
+            android:layout_height="@dimen/my_px_49"
+            android:layout_alignTop="@id/meeting_bg"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/drawable_red"
+            android:gravity="center"
+            android:text="进行中"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_sp_25" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my_px_32"
+            android:layout_alignBottom="@+id/meeting_bg"
+            android:background="@color/color_bf000000"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="15pt"
+            android:paddingRight="@dimen/my_px_15">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2019-07-03  14:00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my_sp_23" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17pt"
+        android:layout_marginTop="14pt"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/my_sp_28" />
+
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="41pt"
+    android:layout_marginTop="37pt"
+    android:layout_marginRight="41pt"
+    android:background="@drawable/bg_right_angle_selector"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="91pt"
+    android:orientation="horizontal"
+    android:padding="5pt">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="60pt"
+        android:layout_height="60pt"
+        android:scaleType="centerCrop"
+        android:src="@drawable/class_notify" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16pt"
+        android:background="#141f2e"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/time"
+            android:paddingLeft="30pt"
+            android:paddingTop="30pt"
+            android:paddingRight="16pt"
+            android:paddingBottom="30pt"
+            android:text="某某会议开始了"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="33pt"
+            android:text="2020-03-09 13:42:08"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</LinearLayout>

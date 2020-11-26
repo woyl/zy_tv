@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">中幼在线</string>
+
+    <!--公共复用-->
+    <string name="network_err_toast">网络异常,请检查网络配置</string>
+
+
+    <!--下载相关-->
+    <string name="app_storage_show">下载和运行空间不足，请先清理系统空间！</string>
+    <!--下载相关-->
+
+    <string name="blank"></string>
+
+    <!-- agora string -->
+    <string name="signin_tips">首次登录需完善用户信息</string>
+
+    <string name="online_text">以最热忱的态度，做最专业的讲解</string>
+    <string name="offline_text">以最热忱的态度，做最专业的讲解</string>
+
+    <string name="login_invalid">登录已经过期,请重新登录</string>
+    <string name="forun_revocation_message">[撤回了一条消息]</string>
+    <string name="forun_send_message">[发送了一张图片]</string>
+    <string name="forun_send_default_message">说说你的看法...</string>
+
+
+    <string name="dialog_title">发现新的版本</string>
+    <string name="dialog_yes">开始下载</string>
+    <string name="dialog_no">下次再说</string>
+    <string name="dialog_desc">最新版本为:</string>
+
+</resources>

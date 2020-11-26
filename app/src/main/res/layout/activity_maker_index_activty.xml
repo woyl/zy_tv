@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.zhongyou.meettvapplicaion.maker.MakerIndexViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bj"
+        android:keepScreenOn="true"
+        android:orientation="vertical"
+        android:paddingLeft="100pt"
+        android:paddingTop="42pt"
+        android:paddingRight="100pt"
+        android:paddingBottom="52pt"
+        tools:context=".maker.MakerIndexActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48pt"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45">
+
+                <RelativeLayout
+                    android:id="@+id/searchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="40pt"
+                    android:layout_marginRight="40pt"
+                    android:background="@drawable/maker_edittext_selector"
+                    android:focusable="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="63pt"
+                    android:src="@drawable/maker_search" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.55"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/notifyImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40pt"
+                    android:background="@drawable/bg_right_angle_selector"
+                    android:src="@drawable/maker_notify" />
+
+                <ImageButton
+                    android:id="@+id/addImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_right_angle_selector"
+                    android:src="@drawable/maker_add" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="38pt"
+            android:weightSum="1">
+            <!--左边容器-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45"
+                android:orientation="vertical">
+
+                <cn.bingoogolapple.bgabanner.BGABanner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="416pt"
+                    android:background="@drawable/bg_right_angle_selector"
+                    android:focusable="true"
+                    android:nextFocusDown="@id/meeting_list"
+                    android:padding="10pt"
+                    android:scaleType="fitXY"
+                    app:banner_aspectRatio="2.5"
+                    app:banner_indicatorGravity="right"
+                    app:banner_numberIndicatorTextSize="20sp"
+                    app:banner_pageChangeDuration="800"
+                    app:banner_pointAutoPlayAble="true"
+                    app:banner_pointAutoPlayInterval="5000"
+                    app:banner_pointContainerBackground="#88aaaaaa"
+                    app:banner_pointContainerLeftRightPadding="24pt"
+                    app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+                    app:banner_pointLeftRightMargin="10pt"
+                    app:banner_pointTopBottomMargin="18pt"
+                    app:banner_tipTextSize="20sp"
+                    app:banner_transitionEffect="depth" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="86pt"
+                    android:layout_marginTop="25pt"
+                    android:background="#66253c55"
+                    android:gravity="center"
+                    android:text="报!大咖有话说"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#33182333" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05" />
+
+            <!--右边容器-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/labelRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100pt"
+                    app:focusScale="1.00"
+                    app:scrollMode="normalScroll" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2pt"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/meet_top_xian_icon" />
+
+                <android.support.v7.widget.RecyclerView
+
+                    android:id="@+id/courseRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

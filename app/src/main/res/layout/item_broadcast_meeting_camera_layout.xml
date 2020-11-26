@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/my_px_250"
+    android:layout_height="@dimen/my_px_140"
+    android:layout_marginStart="@dimen/my_px_10"
+    android:layout_marginTop="@dimen/my_px_10"
+    android:layout_marginBottom="@dimen/my_px_10">
+
+    <ImageView
+        android:id="@+id/item_broadcast_meetingcamera_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/private_item_broadcast_meetingcamera_textbackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_px_32"
+        android:background="@color/transparent_80_white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/item_broadcast_meetingcamera_userInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/my_px_4"
+        android:layout_marginTop="@dimen/my_px_4"
+        android:layout_marginBottom="@dimen/my_px_4"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/my_px_152"
+        android:maxLines="1"
+        android:text="内蒙古 唐杉杉的来迟了"
+        android:textColor="@color/black"
+        android:textSize="@dimen/my_sp_24"
+        app:layout_constraintBottom_toBottomOf="@id/private_item_broadcast_meetingcamera_textbackground"
+        app:layout_constraintLeft_toLeftOf="@id/private_item_broadcast_meetingcamera_textbackground"
+        app:layout_constraintTop_toTopOf="@id/private_item_broadcast_meetingcamera_textbackground" />
+
+    <TextView
+        android:id="@+id/item_broadcast_meetingcamera_ts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/my_px_4"
+        android:layout_marginEnd="@dimen/my_px_4"
+        android:layout_marginBottom="@dimen/my_px_4"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/my_px_152"
+        android:maxLines="1"
+        android:text="12:12"
+        android:textColor="@color/c_FF909090"
+        android:textSize="@dimen/my_sp_24"
+        app:layout_constraintBottom_toBottomOf="@id/private_item_broadcast_meetingcamera_textbackground"
+        app:layout_constraintRight_toRightOf="@id/private_item_broadcast_meetingcamera_textbackground"
+        app:layout_constraintTop_toTopOf="@id/private_item_broadcast_meetingcamera_textbackground" />
+
+</android.support.constraint.ConstraintLayout>

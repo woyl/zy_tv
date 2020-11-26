@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="rc_external_path"
+        path="." />
+    <root-pzath
+        name="rc_root_path"
+        path="" />
+    <files-path path="." name="camera_photos" />
+    <external-path path="." name="files_path" />
+
+</paths>

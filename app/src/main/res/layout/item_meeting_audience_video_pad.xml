@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300px"
+    android:layout_height="168px"
+    android:background="@drawable/shap_rantage_blue"
+    android:padding="@dimen/my_px_3"
+    >
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/headImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_172938"
+        android:scaleType="center"
+        android:src="@drawable/tx" />
+
+    <FrameLayout
+        android:id="@+id/audience_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:background="@color/c_ff8600"
+        android:padding="1dp"
+        android:text="主持人"
+        android:textColor="@color/white"
+        android:textSize="8sp" />
+
+    <TextView
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:id="@+id/videoStatus"
+        android:textSize="20sp"
+        android:text="视频卡顿"
+        android:textColor="@color/white"
+        android:layout_gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/chairManHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="等待主持人进入"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:padding="1dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        tools:text="张三丰" />
+
+    <ImageView
+        android:id="@+id/volume_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="1dp"
+        android:src="@drawable/ic_volume_status" />
+
+</FrameLayout>

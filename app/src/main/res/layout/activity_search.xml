@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".business.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/searchRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160px">
+
+        <ImageView
+            tools:visibility="visible"
+            android:visibility="gone"
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32px"
+            android:src="@drawable/back" />
+
+        <EditText
+            android:singleLine="true"
+            android:drawablePadding="16px"
+            android:nextFocusDown="@id/searchRecyclerView"
+            android:id="@+id/searchEditText"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_alignTop="@+id/linearLayoutTitle"
+            android:layout_alignBottom="@+id/linearLayoutTitle"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20px"
+            android:layout_marginBottom="10px"
+            android:layout_toRightOf="@+id/linearLayoutTitle"
+            android:background="@drawable/bg_edittext_selector"
+            android:drawableLeft="@drawable/search_black"
+            android:hint="搜索教室"
+            android:imeOptions="actionSearch"
+            android:nextFocusRight="@id/confirm"
+            android:padding="20px"
+            android:focusable="true"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:nextFocusDown="@id/searchRecyclerView"
+            android:nextFocusLeft="@id/searchEditText"
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16px"
+            android:layout_toRightOf="@+id/searchEditText"
+            android:background="@drawable/bg_search_button_selector"
+            android:text="确定"
+            android:textColor="@drawable/bg_search_button_text_selector"
+            android:textSize="22sp"
+            android:visibility="gone"
+            tools:visibility="visible" >
+            <requestFocus/>
+        </Button>
+
+        <View
+            android:layout_width="@dimen/my_px_1543"
+            android:layout_height="@dimen/my_px_3"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/meet_top_xian_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchRelativeLayout">
+
+        <ImageView
+            android:id="@+id/emptyView"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/my_px_416"
+            android:layout_height="@dimen/my_px_250"
+            android:src="@drawable/ico_none" />
+
+        <com.zhongyou.meettvapplicaion.view.RecyclerViewTV
+            android:id="@+id/searchRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80px"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:spanCount="3"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_meeting_launch" />
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

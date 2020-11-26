@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/rc_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rc_extension"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+
+
+
+    <RelativeLayout
+        android:layout_marginBottom="60pt"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/rc_extension"
+        android:id="@+id/newMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20pt"
+        >
+
+        <ImageButton
+            android:id="@+id/rc_new_message_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rc_conversation_newmsg"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/rc_new_message_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/rc_new_message_count"
+            android:layout_alignTop="@id/rc_new_message_count"
+            android:layout_alignRight="@id/rc_new_message_count"
+            android:layout_alignBottom="@id/rc_new_message_count"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:visibility="gone"
+            tools:text="10"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+    <io.rong.imkit.RongExtension
+        android:layout_marginBottom="10pt"
+        android:layout_marginLeft="80pt"
+        android:id="@+id/rc_extension"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:RCStyle="C" />
+
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/my_px_300"
+    android:layout_height="@dimen/my_px_168">
+
+    <FrameLayout
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="@dimen/my_px_5"
+        android:layout_marginBottom="@dimen/my_px_6"
+        android:src="@drawable/ic_mic_status" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="@dimen/my_px_10"
+        android:layout_marginBottom="@dimen/my_px_10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/my_sp_28"
+        tools:text="唐姗姗" />
+
+</FrameLayout>

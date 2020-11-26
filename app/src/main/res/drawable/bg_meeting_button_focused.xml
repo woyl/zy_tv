@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:angle="90.0"
+        android:startColor="@color/calling_name_color"
+        android:centerColor="@color/calling_name_color"
+        android:endColor="@color/calling_name_color"/>
+    <corners
+        android:radius="40dp" />
+
+    <stroke
+        android:width="@dimen/my_px_3"
+        android:color="@android:color/white" />
+
+</shape>

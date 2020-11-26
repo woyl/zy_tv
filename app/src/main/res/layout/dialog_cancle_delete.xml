@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="80dp"
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/my_px_776"
+        android:background="@color/white"
+        android:layout_height="@dimen/my_px_337"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="@dimen/my_px_80"
+            tools:text="确定退出当前账号？"
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/cancel"
+                android:layout_width="@dimen/my_px_230"
+                android:textSize="@dimen/my_sp_25"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/bt_code_qx"
+                android:layout_height="@dimen/my_px_78" >
+                <requestFocus/>
+            </ImageButton>
+
+            <ImageButton
+                android:layout_marginLeft="@dimen/my_px_25"
+                android:id="@+id/upload"
+                android:layout_width="@dimen/my_px_230"
+                android:textSize="@dimen/my_sp_25"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/bt_code_qd"
+                android:layout_height="@dimen/my_px_78" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

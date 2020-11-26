@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bj"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".business.SettingActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32px"
+        android:gravity="bottom">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32px"
+            android:scaleType="center"
+            android:src="@drawable/back"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="设 置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_sp_36" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="@dimen/my_px_1543"
+        android:layout_height="@dimen/my_px_3"
+        android:layout_below="@+id/title"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/meet_top_xian_icon" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/my_px_300"
+        android:layout_below="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/resolution"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:padding="2dp"
+            android:src="@drawable/setting_selector_reslove"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:padding="2dp"
+            android:src="@drawable/userinfo_selector_reslove" />
+
+        <ImageView
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:focusable="true"
+            android:padding="2dp"
+            android:src="@drawable/login_out_selector_reslove"
+            android:visibility="gone" />
+
+        <ImageView
+
+            android:id="@+id/exit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:padding="2dp"
+            android:src="@drawable/login_out_selector_reslove" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/versionInfo"
+        android:layout_marginBottom="20pt"
+        android:layout_marginRight="20pt"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        tools:text="V 2.3.2" />
+</RelativeLayout>
